@@ -1,32 +1,36 @@
+@font-face {
+  font-family: "Basis Grotesque";
+  src: url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.eot");
+  src: url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.svg#Basis Grotesque")
+      format("svg");
+}
+
 /* {
   border: 2px dotted red;
 }*/
+
 html,
 body {
   margin: 0;
   padding: 0;
 }
 
-/*
-main {
-  background-image: url(https://i.imgur.com/Mgnn1Le.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-
-  margin: 0;
-  padding: 0;
-}
-*/
-
 h1,
 h3,
 p,
 a,
 figcaption {
-  font-family: "Adobe Caslon Pro", "Cormorant", "Times New Roman", Serif,
-    "Basis Grotesque Pro", "Space Grotesk", "Space Mono", Helvetica, "Monument";
+  font-family: adobe-caslon-pro, "Adobe Caslon Pro", "Cormorant",
+    "Times New Roman", Serif, "Basis Grotesque Pro", "Space Grotesk",
+    "Space Mono", Helvetica, "Monument";
 }
 
 body {
@@ -68,10 +72,12 @@ body {
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 
   position: relative;
   bottom: 30px;
+
+  overflow: hidden;
 }
 
 .img-div {
@@ -80,7 +86,11 @@ body {
   align-items: center;
   margin: 0 2vw;
 
-  overflow: hidden;
+  //overflow: hidden;
+}
+
+.img-div-in-text {
+  margin-bottom: 30px;
 }
 
 .image {
@@ -91,11 +101,11 @@ body {
 }
 
 .img-caption {
-  font-family: "Basis Grotesque Pro";
+  font-family: "Basis Grotesque";
   font-size: 15px;
   font-weight: 100;
-  margin-top: 5px;
-  opacity: 80%;
+  margin-top: 10px;
+  opacity: 40%;
 }
 
 .caption-in-text {
@@ -110,8 +120,11 @@ body {
 
 .image-in-text {
   width: 100%;
-  //min-width: 450px;
-  display: inline-block;
+  max-width: 700px;
+  height: 400px;
+  //display: inline-block;
+
+  object-fit: cover;
 }
 
 .img {
@@ -133,7 +146,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .subsection-title {
@@ -154,9 +167,16 @@ body {
   line-height: 1.6;
 }
 
+.university-logo-img {
+  height: 100px;
+  width: auto;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
 @media only screen and (max-width: 500px) {
   #title {
-    font-size: 14vw;
+    font-size: 15vw;
   }
 
   #subtitle {
