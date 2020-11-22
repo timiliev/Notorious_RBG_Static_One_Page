@@ -15,7 +15,7 @@
 
 /* {
   border: 2px dotted red;
-}*/
+} */
 
 html,
 body {
@@ -40,6 +40,21 @@ body {
 #hero {
   // background-image: url(https://media.giphy.com/media/2G9n0ueuxxjypqyusL/giphy.gif);
   background-image: url(https://i.imgur.com/Mgnn1Le.jpg);
+
+  background-size: cover;
+  background-position: center top;
+  //width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer {
+  // background-image: url(https://media.giphy.com/media/2G9n0ueuxxjypqyusL/giphy.gif);
+  background-image: url(https://i.imgur.com/NlGpz5q.jpg);
 
   background-size: cover;
   background-position: center top;
@@ -100,12 +115,17 @@ body {
   margin: 0;
 }
 
-.img-caption {
+.img-caption,
+.subsection-additional-info {
   font-family: "Basis Grotesque";
   font-size: 15px;
   font-weight: 100;
   margin-top: 10px;
   opacity: 40%;
+}
+
+.subsection-additional-info {
+  margin-top: 0px;
 }
 
 .caption-in-text {
@@ -125,6 +145,24 @@ body {
   //display: inline-block;
 
   object-fit: cover;
+}
+
+.image-in-text-full {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+.img-crop-left {
+  object-position: top right;
+}
+
+.left-crop-70 {
+  object-position: 70% 30%;
+}
+
+.img-crop-right {
+  object-position: center left;
 }
 
 .img {
@@ -155,6 +193,10 @@ body {
   font-size: 30px;
 }
 
+#early-career-subsection-title {
+  margin-bottom: 0px;
+}
+
 .text-paragraph {
   text-align: left;
   font-family: "Cormorant", "Adobe Caslon Pro", "Times New Roman", Serif,
@@ -167,11 +209,19 @@ body {
   line-height: 1.6;
 }
 
+.paragraph-before-img {
+  margin-bottom: 30px;
+}
+
 .university-logo-img {
   height: 100px;
   width: auto;
   margin-bottom: 20px;
-  margin-top: 25px;
+  margin-top: 50px;
+}
+
+.first-universit-logo-img {
+  margin-top: 0px;
 }
 
 @media only screen and (max-width: 500px) {
