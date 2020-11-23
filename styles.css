@@ -1,3 +1,17 @@
+/***** html, body reset *****/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+/***** font definitions *****/
+
 @font-face {
   font-family: "Basis Grotesque";
   src: url("//db.onlinewebfonts.com/t/fb3ddfb68f7942d3a38bb6b63f96ac89.eot");
@@ -13,75 +27,75 @@
       format("svg");
 }
 
-/* {
-  border: 2px dotted red;
-} */
-
-html,
-body {
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: "Adobe Caslon Pro";
+  font-weight: regular;
+  src: url("/fonts/ACaslonPro-Regular.otf") format("opentype");
 }
+
+@font-face {
+  font-family: "Cormorant";
+  font-weight: regular;
+  src: url("/fonts/Cormorant-Regular.ttf") format("truetype");
+}
+
+/***** serif font family *****/
 
 h1,
 h3,
 p,
 a,
-figcaption {
+#title,
+.subsection-title {
   font-family: adobe-caslon-pro, "Adobe Caslon Pro", "Cormorant",
-    "Times New Roman", Serif, "Basis Grotesque Pro", "Space Grotesk",
-    "Space Mono", Helvetica, "Monument";
+    "Times New Roman", serif;
 }
 
-body {
-  text-align: center;
+figcaption,
+.img-caption,
+.subsection-additional-info {
+  font-family: "Basis Grotesque", "SF Pro", Helvetica, Arial, sans-serif;
+}
+
+/***** css follows layout *****/
+
+/* hero section*/
+#hero,
+footer {
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #hero {
-  // background-image: url(https://media.giphy.com/media/2G9n0ueuxxjypqyusL/giphy.gif);
   background-image: url(https://i.imgur.com/Mgnn1Le.jpg);
-
-  background-size: cover;
-  background-position: center top;
-  //width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-footer {
-  // background-image: url(https://media.giphy.com/media/2G9n0ueuxxjypqyusL/giphy.gif);
-  background-image: url(https://i.imgur.com/NlGpz5q.jpg);
-
-  background-size: cover;
-  background-position: center top;
-  //width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#title {
-  color: white;
-  font-family: "Adobe Caslon Pro", "Cormorant", "Times New Roman", Serif,
-    "Basis Grotesque Pro", "Space Grotesk", "Space Mono", Helvetica, "Monument";
-  font-weight: 300;
-  font-size: 3em;
-  //font-size: 10vw;
-  line-height: 1em;
-  margin: 5vh auto;
 }
 
 .item-invisible {
   visibility: hidden;
 }
 
+/* hero section title */
+.title {
+  color: white;
+  font-weight: 300;
+  font-size: 3em;
+  line-height: 1em;
+  margin: 5vh auto;
+}
+
+.signature {
+  width: 110vw;
+  max-width: 350px;
+  height: auto;
+}
+
+/* images below hero section */
 .images-top-div {
   display: flex;
   justify-content: center;
@@ -95,29 +109,37 @@ footer {
   overflow: hidden;
 }
 
-.img-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 2vw;
-
-  //overflow: hidden;
-}
-
-.img-div-in-text {
-  margin-bottom: 30px;
-}
-
-.image {
+.image-top {
   height: 50vw;
   max-height: 270px;
   width: auto;
   margin: 0;
 }
 
+/* images below hero + expands to images in text*/
+.img-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2vw;
+}
+
+.img-div-in-text {
+  margin-bottom: 30px;
+}
+
+/* title of every subsection */
+.subsection-title {
+  font-size: 30px;
+}
+
+#early-career-subsection-title {
+  margin-bottom: 0px;
+}
+
+/* image captions and sub-subtitles */
 .img-caption,
 .subsection-additional-info {
-  font-family: "Basis Grotesque";
   font-size: 15px;
   font-weight: 100;
   margin-top: 10px;
@@ -132,51 +154,11 @@ footer {
   max-width: 450px;
 }
 
+/* paragraphs in each section */
 #main-paragraph {
   font-size: 4vw;
   font-weight: 500;
   margin: 2vw 10% 2vw;
-}
-
-.image-in-text {
-  width: 100%;
-  max-width: 700px;
-  height: 400px;
-  //display: inline-block;
-
-  object-fit: cover;
-}
-
-.image-in-text-full {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-}
-
-.img-crop-left {
-  object-position: top right;
-}
-
-.left-crop-70 {
-  object-position: 70% 30%;
-}
-
-.img-crop-right {
-  object-position: center left;
-}
-
-.img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-.signature {
-  width: 110vw;
-  max-width: 350px;
-  height: auto;
-  //background-color: red;
 }
 
 .text-section {
@@ -185,16 +167,6 @@ footer {
   align-items: center;
   flex-direction: column;
   margin-bottom: 50px;
-}
-
-.subsection-title {
-  font-family: "Adobe Caslon Pro", "Cormorant", "Times New Roman", Serif,
-    "Basis Grotesque Pro", "Space Grotesk", "Space Mono", Helvetica, "Monument";
-  font-size: 30px;
-}
-
-#early-career-subsection-title {
-  margin-bottom: 0px;
 }
 
 .text-paragraph {
@@ -213,6 +185,36 @@ footer {
   margin-bottom: 30px;
 }
 
+/* css guides for images in text */
+.image-in-text {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* image fills screen width until it is 700px */
+.image-in-text-full {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+/* images fills screen until it can, then cropped from left */
+.img-crop-left {
+  object-position: top right;
+}
+
+/* image fills screen until it can, then cropped with 70% left to right point acting as center */
+.left-crop-70 {
+  object-position: 70% 30%;
+}
+
+/* image fills screen until it can, then cropped from right */
+.img-crop-right {
+  object-position: center left;
+}
+
 .university-logo-img {
   height: 100px;
   width: auto;
@@ -224,6 +226,29 @@ footer {
   margin-top: 0px;
 }
 
+/* footer */
+footer {
+  /*background-image: url(https://i.imgur.com/NlGpz5q.jpg);*/
+
+  background-image: /* linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.01),
+      rgba(35, 35, 35, 0.96)
+    ),*/ url("https://i.imgur.com/mNOrEFZ.jpg");
+}
+
+footer p {
+  color: white;
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+.quote {
+  margin: 25px 10%;
+}
+
+/***** media queries *****/
+
 @media only screen and (max-width: 500px) {
   #title {
     font-size: 15vw;
@@ -231,5 +256,11 @@ footer {
 
   #subtitle {
     font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #hero {
+    background-position: 48% 52%;
   }
 }
